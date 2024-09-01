@@ -1,0 +1,29 @@
+# https://github.com/crate-ci/typos/blob/master/docs/reference.md
+
+[files]
+extend-exclude = [
+  "*.svg",
+  "node_modules",
+  "vendor/**/*",
+  "**/*.min.js",
+  "logs/**/*",
+  "*.png",
+  "*.jpg",
+  "*.gif",
+  "*.ico",
+  "*.exe",
+  "build/**/*",
+  "dist/**/*",
+]
+ignore-hidden = true
+ignore-vcs = true # Ignore version control system files
+
+[default]
+check-filename = true
+check-file = true     # Enable spell check for file contents
+
+[default.extend-words]
+colour = "color"
+initialise = "initialize"
+analogue = "analog"
+mozumasu = "mozumasu"     # Treat as not a spelling mistake if both are the same
