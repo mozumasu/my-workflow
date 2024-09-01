@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 変更差分をチェックしたい場合
+# git diff --cached --diff-filter=AM | typos -
+# 変更ファイル全体をチェックしたい場合
+git diff --cached --name-only --diff-filter=AM | xargs typos
+
+# typoがある場合にコミットを防ぐ
+if [[ $? -ne 0 ]]; then
+  exit 1
+fi
